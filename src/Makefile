@@ -12,7 +12,7 @@ all: $(TARGET)
 CPPFLAGS = -g3 -Wall -std=c++2a
 
 DEBUG_FLAGS = -DDEBUG -g $(CPPFLAGS)
-DEBUGEXE = Main
+DEBUGEXE = Main_debug
 
 debug: $(DEBUGEXE)
 
@@ -45,8 +45,9 @@ $(DEBUGEXE): $(OBJS)
 .cpp.o: 
 	$(CXX) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
 
-clean: 
-	rm -rf *.o *~ ../bin/$(TARGET) ../debug/$(DEBUGEXE)
+clean:
+	rm -rf *.o ../bin/$(TARGET)
+	rm -rf ../debug/$(DEBUGEXE)
 
 print-%  : ; @echo $* = $($*)
 
