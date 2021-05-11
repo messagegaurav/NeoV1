@@ -2,18 +2,22 @@
 
 using namespace std;
 
+int MoveCtr::mdefCtrCount = 0;
+int MoveCtr::mCopyCtrCount = 0;
+int MoveCtr::mDestCount = 0;
+
 MoveCtr::MoveCtr(int val)
 {
-    cout << "default constructor called\n";
     data = new int;
     *data = val;
+    mdefCtrCount++;
 }
 
-MoveCtr::MoveCtr(const MoveCtr& obj)
+MoveCtr::MoveCtr(const MoveCtr &obj)
 {
-    cout << "Called Copy constructor\n\n";
     this->data = new int;
     this->data = obj.data;
+    mCopyCtrCount++;
 }
 
 // MoveCtr::MoveCtr(const MoveCtr&& obj)
@@ -25,23 +29,32 @@ MoveCtr::MoveCtr(const MoveCtr& obj)
 
 MoveCtr::~MoveCtr()
 {
-    cout << "Destructor called\n\n";
+    mDestCount++;
     // delete data;
 }
 
 void create_objects()
 {
     // Checking constructor and destructor calls with Vector
-    vector<MoveCtr> obj1;
-    MoveCtr obj2(10);
-    MoveCtr obj3(20);
-    obj1.reserve(2);
-    // obj1.push_back(MoveCtr(10));
-    // obj1.push_back(MoveCtr(20));
-    obj1.push_back(obj2);
-    obj1.push_back(obj3);
-    // obj1.reserve(3);
-    // obj1.emplace_back();
-    // obj1.emplace_back();
-    // obj1.emplace_back();
+    {
+        vector<MoveCtr> myVec;
+        MoveCtr obj2(10);
+        MoveCtr obj3(20);
+        myVec.reserve(2);
+        // obj1.push_back(MoveCtr(10));
+        // obj1.push_back(MoveCtr(20));
+        myVec.push_back(obj2);
+        myVec.push_back(obj3);
+        // myVec.reserve(3);
+        // myVec.emplace_back();
+        // myVec.emplace_back();
+        // myVec.emplace_back();
+
+        for (auto itr : myVec)
+        {
+            itr.show_val();
+        }
+    }
+    MoveCtr sMC = MoveCtr::fun();
+    sMC.show_count(&sMC);
 }
