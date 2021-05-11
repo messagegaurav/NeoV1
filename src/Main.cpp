@@ -4,11 +4,8 @@
 
 using namespace std; 
 
-int main (int argc, char **argv)
+int main ()
 {
-
-    vector<MoveCtr> obj1;
-    obj1.push_back(MoveCtr(10));
-
+    create_objects();
     return 0;
 }

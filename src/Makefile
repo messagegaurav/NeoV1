@@ -5,23 +5,26 @@ CXX = g++
 #Target Executable
 TARGET = Main
 
-all: $(TARGET)
-	@echo Buidling $(TARGET)
+
 
 #Compile-time Flags
-CPPFLAGS = -g3 -Wall -std=c++2a
+CPPFLAGS = -g -Wall -std=c++2a
+BIN = $(CURDIR)/bin/
 
 DEBUG_FLAGS = -DDEBUG -g $(CPPFLAGS)
 DEBUGEXE = Main_debug
+DEBUGDIR = $(CURDIR)/debug/
 
+#Make Release build
+all: $(TARGET)
+	@echo Buidling $(TARGET)
+	$(RUN)
+
+#Make Debug Build
 debug: $(DEBUGEXE)
 
-
-
-CUR_DIR = $(CURDIR)
-
 #includes 
-INCLUDES = -I$(CUR_DIR)/include/
+INCLUDES = -I$(CURDIR)/include/
 
 #Library paths
 LDFLAGS = 
@@ -30,24 +33,27 @@ LDFLAGS =
 LIBS = -lm
 
 #Source files 
-SRCS =	 $(CUR_DIR)/src/Main.cpp $(CUR_DIR)/src/MoveCtr.cpp
+SRCS =	 $(CURDIR)/src/Main.cpp $(CURDIR)/src/MoveCtr.cpp
 
 OBJS = $(SRCS: .cpp = .o)
 
-.PHONY: clean 
+.PHONY: all clean 
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CPPFLAGS) $(INCLUDES) -o $(CUR_DIR)/bin/$(TARGET) $(OBJS) $(LDFLAGS) $(LIBS)
+	$(CXX) $(CPPFLAGS) $(INCLUDES) -o $(BIN)$(TARGET) $(OBJS) $(LDFLAGS) $(LIBS)
 
 $(DEBUGEXE): $(OBJS)
-	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(INCLUDES) -o $(CUR_DIR)/debug/$(DEBUGEXE) $(OBJS) $(LDFLAGS) $(LIBS)
+	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(INCLUDES) -o $(DEBUGDIR)$(DEBUGEXE) $(OBJS) $(LDFLAGS) $(LIBS)
 
 .cpp.o: 
 	$(CXX) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
 
-clean:
-	rm -rf *.o ../bin/$(TARGET)
-	rm -rf ../debug/$(DEBUGEXE)
+clean: 
+	rm -rf *.o *~ $(BIN)$(TARGET) 
+	rm -rf $(DEBUGDIR)$(DEBUGEXE)
+
+RUN: 
+	valgrind $(BIN)$(TARGET)
 
 print-%  : ; @echo $* = $($*)
 
