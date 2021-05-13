@@ -2,22 +2,20 @@
 
 using namespace std;
 
-int MoveCtr::mdefCtrCount = 0;
-int MoveCtr::mCopyCtrCount = 0;
-int MoveCtr::mDestCount = 0;
+int CppConcept::mdefCtrCount = 0;
+int CppConcept::mCopyCtrCount = 0;
+int CppConcept::mDestCount = 0;
 
-MoveCtr::MoveCtr(int val)
+CppConcept::CppConcept(int val)
 {
     data = new int;
     *data = val;
-    mdefCtrCount++;
 }
 
-MoveCtr::MoveCtr(const MoveCtr &obj)
+CppConcept::CppConcept(const CppConcept &obj)
 {
     this->data = new int;
     this->data = obj.data;
-    mCopyCtrCount++;
 }
 
 // MoveCtr::MoveCtr(const MoveCtr&& obj)
@@ -27,22 +25,19 @@ MoveCtr::MoveCtr(const MoveCtr &obj)
 //     this->data = 0;
 // }
 
-MoveCtr::~MoveCtr()
+CppConcept::~CppConcept()
 {
-    mDestCount++;
     // delete data;
 }
 
-void create_objects()
+void VectorGame()
 {
     // Checking constructor and destructor calls with Vector
     {
-        vector<MoveCtr> myVec;
-        MoveCtr obj2(10);
-        MoveCtr obj3(20);
+        vector<CppConcept> myVec;
+        CppConcept obj2(10);
+        CppConcept obj3(20);
         myVec.reserve(2);
-        // obj1.push_back(MoveCtr(10));
-        // obj1.push_back(MoveCtr(20));
         myVec.push_back(obj2);
         myVec.push_back(obj3);
         // myVec.reserve(3);
@@ -55,6 +50,18 @@ void create_objects()
             itr.show_val();
         }
     }
-    MoveCtr sMC = MoveCtr::fun();
+
+    cout << "\n";
+}
+
+void StaticGame()
+{
+    CppConcept obj1(10);
+    int t = CppConcept::setValue(obj1.setValue(300));
+
+    // static object to call static private member
+    CppConcept sMC = CppConcept::fun();
     sMC.show_count(&sMC);
+
+    cout << "\n private static member set = " << t << "\n";
 }

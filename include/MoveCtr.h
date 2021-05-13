@@ -2,37 +2,46 @@
 #include <iostream>
 #include <vector>
 
-class MoveCtr
+class CppConcept
 {
 public:
-    MoveCtr(int val);
-    MoveCtr(const MoveCtr &obj);
+    CppConcept(int val);
+    CppConcept(const CppConcept &obj);
     //MoveCtr(const MoveCtr&& obj);
-    ~MoveCtr();
+    ~CppConcept();
+
     inline void show_val()
     {
         std::cout << "\n this data " << *this->data << "\n";
     }
 
     // Static function of how to call static private member
-    static MoveCtr fun()
+    static CppConcept fun()
     {
-        return MoveCtr(0);
+        return CppConcept(0);
     }
 
     //Static funciton calling static member
-    static void show_count(MoveCtr *sMc)
+    static void show_count(CppConcept *sMc)
     {
         std::cout << "\n default Ctr count = " << sMc->mdefCtrCount << "\n";
         std::cout << "\n Copy Ctr count = " << sMc->mCopyCtrCount << "\n";
         std::cout << "\n Destructor count = " << sMc->mDestCount << "\n";
     }
 
+    static int setValue(int j)
+    {
+        mdefCtrCount = j;
+        return mdefCtrCount;
+    }
+
 private:
     int *data;
+    // static variable to check the count
     static int mdefCtrCount;
     static int mCopyCtrCount;
     static int mDestCount;
 };
 
-void create_objects();
+void VectorGame();
+void StaticGame();

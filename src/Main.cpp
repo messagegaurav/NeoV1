@@ -1,11 +1,12 @@
-#include <iostream> 
+#include <iostream>
 #include <MoveCtr.h>
 #include <stdlib.h>
 
-using namespace std; 
+using namespace std;
 
-int main ()
+int main()
 {
-    create_objects();
+    VectorGame();
+    // StaticGame();
     return 0;
 }
