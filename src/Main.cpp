@@ -7,6 +7,6 @@ using namespace std;
 int main()
 {
     VectorGame();
-    // StaticGame();
+    StaticGame();
     return 0;
 }
