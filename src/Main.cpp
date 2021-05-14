@@ -6,7 +6,9 @@ using namespace std;
 
 int main()
 {
-    VectorGame();
-    StaticGame();
+    //VectorGame();
+    //StaticGame();
+    VectorWidSmartPointers();
+
     return 0;
 }

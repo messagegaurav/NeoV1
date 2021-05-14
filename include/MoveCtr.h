@@ -1,6 +1,8 @@
 //Move Contructor header
 #include <iostream>
 #include <vector>
+#include <memory>
+#include <utility>
 
 class CppConcept
 {
@@ -12,7 +14,9 @@ public:
 
     inline void show_val()
     {
-        std::cout << "\n this data " << *this->data << "\n";
+        std::cout << "\n data = " << *this->data << "\n";
+        // std::cout << "\n data "
+        //           << "\n";
     }
 
     // Static function of how to call static private member
@@ -38,6 +42,7 @@ public:
 private:
     int *data;
     // static variable to check the count
+    int *blah;
     static int mdefCtrCount;
     static int mCopyCtrCount;
     static int mDestCount;
@@ -45,3 +50,4 @@ private:
 
 void VectorGame();
 void StaticGame();
+void VectorWidSmartPointers();
