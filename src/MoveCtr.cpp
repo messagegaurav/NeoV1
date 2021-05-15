@@ -16,16 +16,16 @@ CppConcept::CppConcept(int val)
 CppConcept::CppConcept(const CppConcept &obj)
 {
     cout << "\n calling copy ctr";
-    this->data = new int;
+    //this->data = new int;
     *this->data = *obj.data;
 }
 
-// MoveCtr::MoveCtr(const MoveCtr&& obj)
-// {
-//     cout << "Called Move Constructor\n\n";
-//     this->data = new int;
-//     this->data = 0;
-// }
+CppConcept::CppConcept(const CppConcept &&obj)
+{
+    cout << "\n Called Move Constructor\n\n";
+    this->data = new int;
+    this->data = 0;
+}
 
 CppConcept::~CppConcept()
 {
@@ -66,16 +66,46 @@ void VectorGame()
 // How to use smart pointer with vector : what benefits it provides
 void VectorWidSmartPointers()
 {
-    CppConcept *obj1 = new CppConcept(100);
-    cout << "\n size of sp0 " << sizeof(obj1);
-
+    cout << "\n\n Smart pointer with Vector";
+    //GA: 1st scenario when using raw heap pointers in vector call delete explicitly to avoid leak or SIGSEGV
     {
-        unique_ptr<CppConcept> e1(obj1);
-        shared_ptr<CppConcept> sp0;
-        cout << "\n size of sp0 " << sizeof(*obj1);
-        e1->show_val();
+        cout << "\n 1s scenario ";
+
+        CppConcept *obj1 = new CppConcept(100);
+        vector<CppConcept *> myVec;
+        // myVec.push_back(move(*obj1));
+        myVec.push_back(obj1);
+        myVec[0]->show_val();
+        delete obj1;
+        myVec.clear();
     }
-    obj1->show_val();
+
+    //GA: 2nd scenario using the smart pointers with vector to avoid using delete
+    {
+        cout << "\n\n 2nd scenario ";
+
+        vector<unique_ptr<CppConcept>> myVec;
+        unique_ptr<CppConcept> up1 = make_unique<CppConcept>(200);
+        myVec.push_back(move(up1));
+        myVec[0]->show_val();
+        myVec.clear();
+    }
+
+    //GA: shared pointer unlike unique ptr waits for ref count to get 0 for calling delete not when scope ends
+    {
+        cout << "\n\n 3rd scenario ";
+
+        vector<shared_ptr<CppConcept>> myVec;
+        {
+            auto sp1 = make_shared<CppConcept>(200);
+            {
+                auto sp2 = sp1;
+                myVec.push_back(move(sp2));
+                cout << "\n shared ptr ref count = " << sp1.use_count();
+            }
+        }
+        myVec[0]->show_val();
+    }
 }
 
 void StaticGame()

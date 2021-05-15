@@ -9,6 +9,7 @@ class CppConcept
 public:
     CppConcept(int val);
     CppConcept(const CppConcept &obj);
+    CppConcept(const CppConcept &&obj);
     //MoveCtr(const MoveCtr&& obj);
     ~CppConcept();
 
@@ -42,7 +43,6 @@ public:
 private:
     int *data;
     // static variable to check the count
-    int *blah;
     static int mdefCtrCount;
     static int mCopyCtrCount;
     static int mDestCount;
