@@ -69,7 +69,7 @@ void VectorWidSmartPointers()
     cout << "\n\n Smart pointer with Vector";
     //GA: 1st scenario when using raw heap pointers in vector call delete explicitly to avoid leak or SIGSEGV
     {
-        cout << "\n 1s scenario ";
+        cout << "\n 1st scenario ";
 
         CppConcept *obj1 = new CppConcept(100);
         vector<CppConcept *> myVec;
