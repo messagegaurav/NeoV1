@@ -52,7 +52,7 @@ clean:
 	rm -rf *.o *~ $(BIN)$(TARGET) 
 	rm -rf $(DEBUGDIR)$(DEBUGEXE)
 
-RUN: 
+LEAKS: 
 	valgrind $(BIN)$(TARGET)
 
 print-%  : ; @echo $* = $($*)

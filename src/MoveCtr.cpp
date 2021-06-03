@@ -88,8 +88,8 @@ void VectorWidSmartPointers()
 
         vector<unique_ptr<CppConcept>> myVec;
         unique_ptr<CppConcept> up1 = make_unique<CppConcept>(200);
-        myVec.push_back(move(up1));
-        myVec[0]->show_val();
+        // myVec.push_back(move(up1));
+        // myVec[0]->show_val();
         if (!up1)
         {
             cout << "\n\n Since its moved to vector, it now contains null";
@@ -137,8 +137,20 @@ void StaticGame()
     cout << "\n private static member set = " << t << "\n";
 }
 
+auto RetSmartPtr(unique_ptr<CppConcept> up1)
+{
+    cout << "\n\nMethod: " << __FUNCTION__;
+    up1->set(400);
+    up1->show_val();
+    return up1;
+}
+
 void PlayWithSmartPtr(unique_ptr<CppConcept> &temp)
 {
     cout << "\n\n Call:  " << __FUNCTION__;
     temp->show_val();
+    unique_ptr<CppConcept> temp1 = make_unique<CppConcept>(500);
+    temp1->show_val();
+    temp1 = RetSmartPtr(move(temp));
+    temp1->show_val();
 }

@@ -4,6 +4,7 @@
 #include <memory>
 #include <utility>
 
+using namespace std;
 class CppConcept
 {
 public:
@@ -14,14 +15,14 @@ public:
 
     void show_val()
     {
-        std::cout << "\n data = " << *this->data << "\n";
-        // std::cout << "\n data "
+        cout << "\n data = " << *this->data << "\n";
+        // cout << "\n data "
         //           << "\n";
     }
 
     void show_val() const
     {
-        std::cout << "\n data = " << *this->data << "\n";
+        cout << "\n data = " << *this->data << "\n";
     }
 
     // Static function of how to call static private member
@@ -33,15 +34,20 @@ public:
     //Static funciton calling static member
     static void show_count(CppConcept *sMc)
     {
-        std::cout << "\n default Ctr count = " << sMc->mdefCtrCount << "\n";
-        std::cout << "\n Copy Ctr count = " << sMc->mCopyCtrCount << "\n";
-        std::cout << "\n Destructor count = " << sMc->mDestCount << "\n";
+        cout << "\n default Ctr count = " << sMc->mdefCtrCount << "\n";
+        cout << "\n Copy Ctr count = " << sMc->mCopyCtrCount << "\n";
+        cout << "\n Destructor count = " << sMc->mDestCount << "\n";
     }
 
     static int setValue(int j)
     {
         mdefCtrCount = j;
         return mdefCtrCount;
+    }
+
+    void set(int data)
+    {
+        *this->data = data;
     }
 
 private:
@@ -55,4 +61,5 @@ private:
 void VectorGame();
 void StaticGame();
 void VectorWidSmartPointers();
-void PlayWithSmartPtr(std::unique_ptr<CppConcept> &temp);
+void PlayWithSmartPtr(unique_ptr<CppConcept> &temp);
+auto RetSmartPtr(unique_ptr<CppConcept> up1);
