@@ -16,7 +16,7 @@ CppConcept::CppConcept(int val)
 CppConcept::CppConcept(const CppConcept &obj)
 {
     cout << "\n calling copy ctr";
-    //this->data = new int;
+    this->data = new int;
     *this->data = *obj.data;
 }
 
@@ -24,7 +24,7 @@ CppConcept::CppConcept(const CppConcept &&obj)
 {
     cout << "\n Called Move Constructor\n\n";
     this->data = new int;
-    this->data = 0;
+    *this->data = 0;
 }
 
 CppConcept::~CppConcept()
@@ -72,9 +72,11 @@ void VectorWidSmartPointers()
         cout << "\n 1st scenario ";
 
         CppConcept *obj1 = new CppConcept(100);
+        cout << "\n obj adr " << &obj1;
         vector<CppConcept *> myVec;
         // myVec.push_back(move(*obj1));
         myVec.push_back(obj1);
+        cout << "\n obj adr " << &myVec[0];
         myVec[0]->show_val();
         delete obj1;
         myVec.clear();
@@ -88,6 +90,21 @@ void VectorWidSmartPointers()
         unique_ptr<CppConcept> up1 = make_unique<CppConcept>(200);
         myVec.push_back(move(up1));
         myVec[0]->show_val();
+        if (!up1)
+        {
+            cout << "\n\n Since its moved to vector, it now contains null";
+        }
+        else
+        {
+            cout << "\n pushing refrence of unique ptr to vector, thus contains valid data";
+            PlayWithSmartPtr(up1);
+
+            if (up1.get() != nullptr)
+            {
+                up1->show_val();
+                cout << "\n passed by ref, now passed unique ptr will disown and will be null";
+            }
+        }
         myVec.clear();
     }
 
@@ -118,4 +135,10 @@ void StaticGame()
     sMC.show_count(&sMC);
 
     cout << "\n private static member set = " << t << "\n";
+}
+
+void PlayWithSmartPtr(unique_ptr<CppConcept> &temp)
+{
+    cout << "\n\n Call:  " << __FUNCTION__;
+    temp->show_val();
 }

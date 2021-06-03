@@ -10,14 +10,18 @@ public:
     CppConcept(int val);
     CppConcept(const CppConcept &obj);
     CppConcept(const CppConcept &&obj);
-    //MoveCtr(const MoveCtr&& obj);
     ~CppConcept();
 
-    inline void show_val()
+    void show_val()
     {
         std::cout << "\n data = " << *this->data << "\n";
         // std::cout << "\n data "
         //           << "\n";
+    }
+
+    void show_val() const
+    {
+        std::cout << "\n data = " << *this->data << "\n";
     }
 
     // Static function of how to call static private member
@@ -51,3 +55,4 @@ private:
 void VectorGame();
 void StaticGame();
 void VectorWidSmartPointers();
+void PlayWithSmartPtr(std::unique_ptr<CppConcept> &temp);
