@@ -1,4 +1,4 @@
-#Compilers 
+#Compilers
 CC = gcc
 CXX = g++
 
@@ -23,21 +23,21 @@ all: $(TARGET)
 #Make Debug Build
 debug: $(DEBUGEXE)
 
-#includes 
+#includes
 INCLUDES = -I$(CURDIR)/include/
 
 #Library paths
-LDFLAGS = 
+LDFLAGS =
 
-#libraries to link with executable 
+#libraries to link with executable
 LIBS = -lm
 
-#Source files 
-SRCS =	 $(CURDIR)/src/Main.cpp $(CURDIR)/src/MoveCtr.cpp
+#Source files
+SRCS =	 $(CURDIR)/src/*.cpp
 
 OBJS = $(SRCS: .cpp = .o)
 
-.PHONY: all clean 
+.PHONY: all clean
 
 $(TARGET): $(OBJS)
 	$(CXX) $(CPPFLAGS) $(INCLUDES) -o $(BIN)$(TARGET) $(OBJS) $(LDFLAGS) $(LIBS)
@@ -45,14 +45,14 @@ $(TARGET): $(OBJS)
 $(DEBUGEXE): $(OBJS)
 	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(INCLUDES) -o $(DEBUGDIR)$(DEBUGEXE) $(OBJS) $(LDFLAGS) $(LIBS)
 
-.cpp.o: 
+.cpp.o:
 	$(CXX) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
 
-clean: 
-	rm -rf *.o *~ $(BIN)$(TARGET) 
+clean:
+	rm -rf *.o *~ $(BIN)$(TARGET)
 	rm -rf $(DEBUGDIR)$(DEBUGEXE)
 
-LEAKS: 
+LEAKS:
 	valgrind $(BIN)$(TARGET)
 
 print-%  : ; @echo $* = $($*)
