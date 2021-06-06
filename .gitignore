@@ -48,12 +48,12 @@ Thumbs.db
 *.mov
 *.wmv
 
-#vscode defaults 
-*.vscode 
+#vscode defaults
+*.vscode
 
-#Executables 
-bin/
-debug/
+#Executables
+/bin
+/debug
 
 
 
