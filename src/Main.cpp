@@ -10,8 +10,10 @@
 #include <stdlib.h>
 #include "ObjectRelations.h"
 #include "timer.h"
+#include <chrono>
 
 using namespace std;
+using namespace chrono;
 
 int main()
 {
@@ -19,7 +21,11 @@ int main()
     // StaticGame();
     // VectorWidSmartPointers();
     // delegationMethod();
+    auto start = high_resolution_clock::now();
     callingTimer();
+    auto stop = high_resolution_clock::now();
+    auto diff_time = duration_cast<seconds>(stop - start);
+    cout << "\n\n Time take: " << diff_time.count();
 
     cout << "\n\n";
     return 0;
