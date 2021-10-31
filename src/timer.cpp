@@ -5,21 +5,12 @@
  * Understanding CPP Concepts
  */
 
-//Understanding Nested Class concepts to help reduce coupling among components
+// Understanding Nested Class concepts to help reduce coupling among components
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <memory>
 #include "timer.h"
 
-#ifdef WIN32
-#include <Windows.h>
-#else
-#include <sys/time.h>
-#endif
-
 using namespace std;
+using namespace chrono;
 
 class Timer::Implementation
 {
@@ -58,8 +49,6 @@ Timer::~Timer()
 {
     while (mpImpl->elapsedTime() < mpImpl->mDuration)
         ;
-    cout << "\n"
-         << mpImpl->mDuration << "  elapsed seconds";
     delete mpImpl;
     mpImpl = NULL;
 }
@@ -68,4 +57,13 @@ void callingTimer()
 {
     double wait = 5;
     auto pTimer = make_unique<Timer>(wait);
+}
+
+void executionTime()
+{
+    auto start = high_resolution_clock::now();
+    callingTimer();
+    auto stop = high_resolution_clock::now();
+    auto diff_time = duration_cast<seconds>(stop - start);
+    cout << "\n\n Time taken: " << diff_time.count() << " ms";
 }

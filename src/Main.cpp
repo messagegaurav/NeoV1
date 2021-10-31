@@ -10,23 +10,23 @@
 #include <stdlib.h>
 #include "ObjectRelations.h"
 #include "timer.h"
-#include <chrono>
+#include "BuilderClass.h"
 
 using namespace std;
 using namespace chrono;
 
-int main()
+void call()
 {
     // VectorGame();
     // StaticGame();
     // VectorWidSmartPointers();
     // delegationMethod();
-    auto start = high_resolution_clock::now();
-    callingTimer();
-    auto stop = high_resolution_clock::now();
-    auto diff_time = duration_cast<seconds>(stop - start);
-    cout << "\n\n Time take: " << diff_time.count();
+    executionTime();
+}
 
+int main()
+{
+    callBuilderClass();
     cout << "\n\n";
     return 0;
 }

@@ -53,7 +53,7 @@ clean:
 	rm -rf $(DEBUGDIR)$(DEBUGEXE)
 
 LEAKS:
-	valgrind $(BIN)$(TARGET)
+	valgrind --leak-check=full $(BIN)$(TARGET)
 
 print-%  : ; @echo $* = $($*)
 

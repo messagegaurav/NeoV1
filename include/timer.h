@@ -6,6 +6,19 @@
  */
 
 // Hiding, now all data members for Implementation are hidden from this header file
+#ifndef __TIMER_CPP__
+#define __TIMER_CPP__
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <memory>
+#include <chrono>
+#ifdef WIN32
+#include <Windows.h>
+#else
+#include <sys/time.h>
+#endif
 class Timer
 {
 public:
@@ -20,3 +33,6 @@ private:
 };
 
 void callingTimer();
+void executionTime();
+
+#endif
