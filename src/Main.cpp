@@ -11,6 +11,7 @@
 #include "ObjectRelations.h"
 #include "timer.h"
 #include "BuilderClass.h"
+#include "AbstractFactoryMethod.h"
 
 using namespace std;
 using namespace chrono;
@@ -26,7 +27,8 @@ void call()
 
 int main()
 {
-    callBuilderClass();
+    // callBuilderClass();
+    PlayingWithFactories();
     cout << "\n\n";
     return 0;
 }
