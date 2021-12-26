@@ -12,6 +12,7 @@
 #include "timer.h"
 #include "BuilderClass.h"
 #include "AbstractFactoryMethod.h"
+#include "SingletonPattern.h"
 
 using namespace std;
 using namespace chrono;
@@ -28,7 +29,8 @@ void call()
 int main()
 {
     // callBuilderClass();
-    PlayingWithFactories();
+    // PlayingWithFactories();
+    CallSingleton();
     cout << "\n\n";
     return 0;
 }
