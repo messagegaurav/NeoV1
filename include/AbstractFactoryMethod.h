@@ -12,19 +12,13 @@
 #include <memory>
 #include <vector>
 
-enum class eNodeType
-{
-    NODE_MCN,
-    NODE_FCN
-};
-
+using namespace std;
 // base class for node
 class cNode
 {
 public:
     virtual ~cNode() {}
     virtual void DoSomething() = 0;
-    cNode() {}
 };
 
 class cMCNNode : public cNode
@@ -47,10 +41,12 @@ public:
 class cNodeFactory
 {
 public:
-    static cNode *GetNode(eNodeType type);
-
-private:
-    cNode *mpNode;
+    enum class eNodeType
+    {
+        NODE_MCN,
+        NODE_FCN
+    };
+    static unique_ptr<cNode> GetNode(eNodeType type);
 };
 
 void PlayingWithFactories();

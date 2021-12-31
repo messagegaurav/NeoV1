@@ -9,12 +9,12 @@
 
 using namespace std;
 
-cNode *cNodeFactory::GetNode(eNodeType type)
+unique_ptr<cNode> cNodeFactory::GetNode(cNodeFactory::eNodeType type)
 {
     if (type == eNodeType::NODE_MCN)
-        return new cMCNNode;
+        return make_unique<cMCNNode>();
     if (type == eNodeType::NODE_FCN)
-        return new cFCNNode;
+        return make_unique<cFCNNode>();
 }
 
 void cMCNNode::DoSomething()
@@ -55,6 +55,11 @@ cFCNNode::~cFCNNode()
 
 void PlayingWithFactories()
 {
-    unique_ptr<cNode> pNode(cNodeFactory::GetNode(eNodeType::NODE_MCN));
-    pNode->DoSomething();
+    // unique_ptr<cNode> pNode.reset(cNodeFactory::GetNode(eNodeType::NODE_MCN));
+    // pNode->DoSomething();
+    auto pNode1 = cNodeFactory::GetNode(cNodeFactory::eNodeType::NODE_FCN);
+    cout << pNode1.get() << "\n\n";
+    pNode1 = (cNodeFactory::GetNode(cNodeFactory::eNodeType::NODE_MCN));
+    pNode1->DoSomething();
+    cout << pNode1.get() << "\n\n";
 }

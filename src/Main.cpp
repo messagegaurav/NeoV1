@@ -24,13 +24,15 @@ void call()
     // VectorWidSmartPointers();
     // delegationMethod();
     executionTime();
+    // CallSingleton();
+    // callBuilderClass();
 }
 
 int main()
 {
-    // callBuilderClass();
-    // PlayingWithFactories();
-    CallSingleton();
+
+    PlayingWithFactories();
+
     cout << "\n\n";
     return 0;
 }

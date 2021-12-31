@@ -49,6 +49,8 @@ void cSingleton::DoSomething()
 void CallSingleton()
 {
     // unique_ptr<cSingleton> ptr(cSingleton::getInstance());
+
+
     cSingleton *ptr = &(cSingleton::getInstance());
     ptr->DoSomething();
 
