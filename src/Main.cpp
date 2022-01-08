@@ -13,6 +13,7 @@
 #include "BuilderClass.h"
 #include "AbstractFactoryMethod.h"
 #include "SingletonPattern.h"
+#include "AdapterDesign.h"
 
 using namespace std;
 using namespace chrono;
@@ -26,13 +27,13 @@ void call()
     executionTime();
     // CallSingleton();
     // callBuilderClass();
+    // PlayingWithFactories();
 }
 
 int main()
 {
 
-    PlayingWithFactories();
-
+    CallAdapterDesign();
     cout << "\n\n";
     return 0;
 }
