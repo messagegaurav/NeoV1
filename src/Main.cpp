@@ -24,16 +24,17 @@ void call()
     // StaticGame();
     // VectorWidSmartPointers();
     // delegationMethod();
-    executionTime();
+    // executionTime();
     // CallSingleton();
-    // callBuilderClass();
+    callBuilderClass();
     // PlayingWithFactories();
+    // CallAdapterDesign();
 }
 
 int main()
 {
 
-    CallAdapterDesign();
+    call();
     cout << "\n\n";
     return 0;
 }

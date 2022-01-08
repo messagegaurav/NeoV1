@@ -39,19 +39,19 @@ class PizzaBuilder
 public:
     virtual ~PizzaBuilder() = default;
 
-    void createNewPizza()
+    virtual void buildDough() = 0;
+    virtual void buildSauce() = 0;
+    virtual void buildToppings() = 0;
+
+    void GetPizzaInstance()
     {
         m_pizza = make_unique<Pizza>();
     }
 
-    Pizza *getPizza()
+    Pizza *DeliverPizza()
     {
         return m_pizza.release();
     }
-
-    virtual void buildDough() = 0;
-    virtual void buildSauce() = 0;
-    virtual void buildToppings() = 0;
 
 protected:
     unique_ptr<Pizza> m_pizza;
@@ -100,24 +100,12 @@ public:
 class Cook
 {
 public:
-    void openPizza() const;
+    void setCook(PizzaBuilder *pPizzaBuilder);
 
-    void createPizza(PizzaBuilder *pPizzaBuilder);
-
-    /* If using unique_ptr.release() call releasePtr explicitly to free all the associated object */
-    void releasePtr()
-    {
-        if (mp_Pizza != nullptr)
-        {
-            cout << "\n\n calling releasePtr";
-            delete mp_Pizza;
-            mp_Pizza = nullptr;
-        }
-    }
+    void createPizza();
 
 private:
     PizzaBuilder *mp_PizzaBuilder;
-    Pizza *mp_Pizza;
 };
 
 #endif
