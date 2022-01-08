@@ -14,6 +14,7 @@
 #include "AbstractFactoryMethod.h"
 #include "SingletonPattern.h"
 #include "AdapterDesign.h"
+#include "DecoratorPattern.h"
 
 using namespace std;
 using namespace chrono;
@@ -26,9 +27,10 @@ void call()
     // delegationMethod();
     // executionTime();
     // CallSingleton();
-    callBuilderClass();
+    // callBuilderClass();
     // PlayingWithFactories();
     // CallAdapterDesign();
+    CallDecoratorPattern();
 }
 
 int main()
