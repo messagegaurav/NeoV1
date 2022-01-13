@@ -25,14 +25,14 @@ cSingleton::~cSingleton()
 
 cSingleton &cSingleton::getInstance()
 {
-    // if (singlePtr != nullptr)
+    // if (singlePtr == nullptr)
     // {
-    //     singlePtr = new cSingleton;
-    //     return singlePtr;
+    //     singlePtr = new cSingleton();
+    //     return *singlePtr;
     // }
     // else
     // {
-    //     return singlePtr;
+    //     return *singlePtr;
     // }
 
     // GA: using scott meyes method with stack object that inturn calls constructor and destructor for no memory leaks instead using new.
@@ -50,13 +50,14 @@ void CallSingleton()
 {
     // unique_ptr<cSingleton> ptr(cSingleton::getInstance());
 
-
     cSingleton *ptr = &(cSingleton::getInstance());
+    ptr->a = 10;
     ptr->DoSomething();
 
     cSingleton *ptr1 = &(cSingleton::getInstance());
+    ptr1->a = 20;
     ptr1->DoSomething();
 
-    cout << "ptr = " << ptr << "\n\n";
-    cout << "ptr1 = " << ptr1 << "\n\n";
+    cout << "ptr = " << ptr->a << "\n\n";
+    cout << "ptr1 = " << ptr1->a << "\n\n";
 }

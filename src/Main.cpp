@@ -15,6 +15,7 @@
 #include "SingletonPattern.h"
 #include "AdapterDesign.h"
 #include "DecoratorPattern.h"
+#include "ObserverPattern.h"
 
 using namespace std;
 using namespace chrono;
@@ -30,13 +31,14 @@ void call()
     // callBuilderClass();
     // PlayingWithFactories();
     // CallAdapterDesign();
-    CallDecoratorPattern();
+    // CallDecoratorPattern();
+    callObserverPattern();
 }
 
 int main()
 {
 
     call();
-    cout << "\n\n";
+    cout << "\n";
     return 0;
 }

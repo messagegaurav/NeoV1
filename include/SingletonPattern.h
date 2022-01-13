@@ -19,12 +19,13 @@ public:
 
     ~cSingleton();
     void DoSomething();
+    int a;
 
 private:
     // static cSingleton *singlePtr;
     cSingleton();
     cSingleton(const cSingleton &) = delete;
-    cSingleton(cSingleton &&) = delete;
+    cSingleton(cSingleton &&) = delete; // TODO: why
     cSingleton &operator=(const cSingleton &) = delete;
 };
 
