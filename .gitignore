@@ -61,3 +61,5 @@ Thumbs.db
 bin/Main
 
 workspace.code-workspace
+
+/examples/bin/*
