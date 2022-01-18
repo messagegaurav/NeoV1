@@ -1,3 +1,10 @@
+/*
+ * Created on Tue Jan 18 2022
+ *
+ * Copyright (c) 2022 Gaurav Awasthi
+ * Understanding CPP Concepts
+ */
+
 #include <iostream>
 #include <string.h>
 #include <stdio.h>

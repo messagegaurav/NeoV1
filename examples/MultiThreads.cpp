@@ -13,25 +13,22 @@
 
 using namespace std;
 
-volatile int counter = 0;
+static int counter = 0;
 pthread_mutex_t myMutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t myCond = PTHREAD_COND_INITIALIZER;
 
 void *producer(void *param)
 {
-    for (int i = 0; i < 4; i++)
+    pthread_mutex_lock(&myMutex);
+    cout << "thread: " << *((int *)param) << "            incremements counter: " << counter << "\n";
+    counter++;
+    if (counter == 1)
     {
-        pthread_mutex_lock(&myMutex);
-        cout << "thread: " << *((int *)param) << "            incremements counter: " << counter << "\n";
-        if (counter == 4)
-        {
-            cout << "signalled \n";
-            pthread_cond_signal(&myCond);
-            sleep(2);
-        }
-        counter++;
-        pthread_mutex_unlock(&myMutex);
+        cout << "signalled \n";
+        pthread_cond_signal(&myCond);
     }
+    sleep(2);
+    pthread_mutex_unlock(&myMutex);
     return 0;
 }
 
@@ -40,7 +37,7 @@ void *consumer(void *param)
     int ret = 0;
     pthread_mutex_lock(&myMutex);
     cout << "thread: " << *((int *)param) << "            trying to read counter: " << counter << "\n";
-    while (counter != 4)
+    while (counter != 1)
     {
         cout << "waiting on condition \n";
         pthread_cond_wait(&myCond, &myMutex);
