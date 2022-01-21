@@ -25,16 +25,17 @@ public:
     {
         cout << "\n constructed base";
     }
-    void fun()
-    {
-        cout << "\n I am doin fun";
-    }
-    ~base()
+    virtual ~base()
     {
         cout << "\n base destructed";
     }
+    virtual void fun() final; // GA: de-virtualization optimization
 };
 
+void base::fun()
+{
+    cout << "\n I am doin fun";
+}
 class derived : public base
 {
 
@@ -44,10 +45,10 @@ public:
         cout << "\n derived constructed";
     }
 
-    void fun()
-    {
-        cout << "\n doin fun in derived";
-    }
+    // void fun()
+    // {
+    //     cout << "\n doin fun in derived";
+    // }
     ~derived()
     {
         cout << "\n derived destructed";
@@ -56,14 +57,12 @@ public:
 
 int main()
 {
-    base b1;
-    b1.fun();
 
-    // derived *d = new derived();
-    // d->fun();
+    base *b = new derived();
+    b->fun();
 
-    derived d1;
-    d1.fun();
+    delete b;
 
+    cout << "\n\n";
     return 0;
 }
