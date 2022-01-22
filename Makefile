@@ -24,7 +24,7 @@ all: $(TARGET)
 debug: $(DEBUGEXE)
 
 #includes
-INCLUDES = -I$(CURDIR)/include/
+INCLUDES = -I $(CURDIR)/include/
 
 #Library paths
 LDFLAGS =
