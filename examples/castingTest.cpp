@@ -11,44 +11,79 @@
 using namespace std;
 class base
 {
+public:
+    base()
+    {
+        m_data = 5;
+    }
     virtual void fun() {}
+
+private:
+    int m_data;
 };
 
+class enemy;
 class player : public base
 {
 public:
-    void hoho()
+    player() { m_data = 10; }
+
+    void changeYdata(int _data) const
     {
-        cout << "\n hoho";
+        y_data = _data;
     }
+
+    void playerData()
+    {
+        cout << "\n player: xdata: " << m_data << " y_data: " << y_data;
+    }
+
+private:
+    int m_data;
+    mutable int y_data;
 };
 
 class enemy : public base
 {
 public:
-    void hehe()
+    enemy() { m_data = 20; }
+    void enemyData()
     {
-        cout << "\n damn ";
+        cout << "\n enemy: data:  " << m_data;
     }
+
+private:
+    int m_data;
 };
 
 int main()
 {
-    player *p;
-    base *b = new enemy();
     base b1;
-    player p1;
-    p = dynamic_cast<player *>(&p1);
+    enemy e1;
+    base *b = new player();
+
+    player *p = dynamic_cast<player *>(b);
     if (p)
     {
-        cout << "\n pass";
+        p->changeYdata(35);
+        p->playerData();
+        cout << "\n dynamic cast succeeds";
     }
     else
     {
-        cout << "\n fail";
+
+        cout << "\n dynamice cast Failed: NULL";
     }
 
+    b = new enemy();
     player *p2 = static_cast<player *>(b);
-    p2->hoho();
+    p2->playerData();
+
+    // doesn't throw any exceptions thus dangerous thing but can be used to parse members individually from a container
+    player *p3 = reinterpret_cast<player *>(b);
+    p3->playerData();
+
+    int *ptr = reinterpret_cast<int *>(&e1);
+    cout << "\n reinterpret cast: " << *ptr;
     cout << "\n\n";
 }
