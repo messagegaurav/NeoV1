@@ -53,7 +53,7 @@ public:
 
     void printVal()
     {
-        cout << " \n m_size = " << m_size << "  m_data" << m_data;
+        cout << " \n m_size = " << m_size << "  m_data: " << m_data;
     }
 
     ~Moved()
@@ -97,8 +97,11 @@ int main()
         itr->printVal();
     }
 
-    // delete m1;
-    // delete m2;
+    for (auto itr : myVec)
+    {
+        cout << "\n deleting the heap objects..";
+        delete itr;
+    }
 
     cout << "\n\n";
 
