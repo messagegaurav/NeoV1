@@ -11,7 +11,9 @@
 #include <iostream>
 #include <functional>
 #include <stdio.h>
+#include <assert.h>
 
+#define DEBUG
 using namespace std;
 using namespace std::placeholders;
 
@@ -46,6 +48,7 @@ class my2D
 public:
     void setCallback(funcPointer _fp1)
     {
+        assert(_fp1 != NULL);
         drawCallback = _fp1;
     }
 
@@ -81,6 +84,8 @@ int main()
 
     my2D draw2D;
     my3D draw3D;
+
+    assert(&draw3D != NULL);
 
     draw2D.setCallback(bind(&my3D::draw, draw3D, _1, _2, 50)); // binded member function with the params and using it's object
 

@@ -31,8 +31,8 @@ void call()
     // callBuilderClass();
     // PlayingWithFactories();
     // CallAdapterDesign();
-    // CallDecoratorPattern();
-    callObserverPattern();
+    CallDecoratorPattern();
+    // callObserverPattern();
 }
 
 int main()
