@@ -49,18 +49,43 @@ void *consumer(void *param)
     return (void *)ret;
 }
 
+typedef struct base
+{
+    int i;
+    int j;
+    int result;
+} base_t;
+
+void *returnStruct(void *ptr)
+{
+    base_t *myBase = (base_t *)ptr;
+    myBase->result = myBase->i + myBase->j;
+    pthread_exit(myBase);
+}
+
 int main()
 {
     pthread_t thread1, thread2, thread3;
     pthread_cond_init(&myCond, 0);
+
+    base_t myBase;
+    myBase.i = 10;
+    myBase.j = 20;
     int id1 = 1, id2 = 2;
     pthread_mutex_init(&myMutex, 0);
     pthread_create(&thread1, NULL, &producer, &id1);
 
     pthread_create(&thread2, NULL, &consumer, &id2);
+
+    pthread_create(&thread3, 0, &returnStruct, &myBase);
+
     pthread_join(thread1, 0);
 
     pthread_join(thread2, 0);
+
+    pthread_join(thread3, 0);
+
+    cout << "\n struct values now: myBase.result: " << myBase.result;
 
     pthread_mutex_destroy(&myMutex);
     pthread_cond_destroy(&myCond);

@@ -14,10 +14,10 @@ using namespace std;
 sem_t mySem;
 void *semWait(void *param)
 {
-    sem_wait(&mySem);
+
     cout << "thread: " << *((int *)param) << "       Into critical section and doin some work \n";
     sleep(4);
-
+    sem_wait(&mySem);
     cout << "thread: " << *((int *)param) << " done with my work now exiting.. \n";
 
     return 0;
