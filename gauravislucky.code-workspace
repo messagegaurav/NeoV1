@@ -35,6 +35,9 @@
 		],
 		"code-runner.clearPreviousOutput": true,
 		"fileheader.Author": "gauravawasthi@outlook.com",
-		"fileheader.LastModifiedBy": "gaurav"
+		"fileheader.LastModifiedBy": "gaurav",
+		"files.associations": {
+			"string_view": "cpp"
+		}
 	}
 }
