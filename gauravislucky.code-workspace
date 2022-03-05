@@ -37,7 +37,9 @@
 		"fileheader.Author": "gauravawasthi@outlook.com",
 		"fileheader.LastModifiedBy": "gaurav",
 		"files.associations": {
-			"string_view": "cpp"
+			"string_view": "cpp",
+			"iostream": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }

@@ -71,6 +71,31 @@ private:
     char *m_data;
 };
 
+void VectorInitializations()
+{
+    // ex1
+    vector<int> myvec(5);
+    for (int x : myvec)
+        cout << "\n x: " << x << endl;
+
+    // ex2 assigning array
+    string str[] = {"Gaurav", "Neo", "Trinity"};
+    vector<string> myStringvec(str, str + sizeof(str) / sizeof(string));
+    for (auto itr : myStringvec)
+        cout << "\n myStringVec: " << itr << endl;
+
+    // ex3 assing character array to vector
+    char arr[] = {'a', 'b', 'c'};
+    vector<char> myCharVec(arr, arr + sizeof(arr) / sizeof(arr[0]));
+    for (auto btr : myCharVec)
+        cout << "\n myCharVec: " << btr << endl;
+
+    // ex4 assigning another vector
+    vector<string> copyVector(myStringvec);
+    for (auto itr : copyVector)
+        cout << "\n copyVector: " << itr << endl;
+}
+
 int main()
 {
 
@@ -103,7 +128,10 @@ int main()
         delete itr;
     }
 
-    cout << "\n\n";
+    VectorInitializations();
+
+    cout
+        << "\n\n";
 
     return 0;
 }

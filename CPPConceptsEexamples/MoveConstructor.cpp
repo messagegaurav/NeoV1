@@ -27,27 +27,38 @@ public:
     {
         this->m_size = sizeof(m1.m_data);
         this->m_data = new char[this->m_size];
-        *this->m_data = *m1.m_data;
+        strcpy(this->m_data, m1.m_data);
         cout << "\n copy ctr m_size  = " << m_size << "  m_data = " << m_data;
-    }
-    Moved(Moved &&m1)
-    {
-        this->m_size = m1.m_size;
-        this->m_data = m1.m_data;
-        cout << "\n Moved ctrr size = " << m_size << " m_data = " << m_data;
-        m1.m_size = 0;
-        m1.m_data = nullptr;
     }
 
     Moved &operator=(Moved &&m1)
     {
-        delete m_data;
-        this->m_size = m1.m_size;
-        this->m_data = m1.m_data;
-        m1.m_size = 0;
-        m1.m_data = nullptr;
-        cout << "\n Moved assignment oprt size = " << this->m_size << " m_data = " << this->m_data;
+        if (this != &m1)
+        {
+            delete m_data;
+            this->m_size = m1.m_size;
+            this->m_data = m1.m_data;
+            m1.m_size = 0;
+            m1.m_data = nullptr;
+            cout << "\n Moved assignment oprt size = " << this->m_size << " m_data = " << this->m_data;
+        }
         return *this;
+    }
+
+    Moved(Moved &&m1) noexcept
+        : m_data(nullptr), m_size(0)
+    {
+        // this->m_size = m1.m_size;
+        // this->m_data = m1.m_data;
+        // cout << "\n Moved ctrr size = " << m_size << " m_data = " << m_data;
+        // m1.m_size = 0;
+        // m1.m_data = nullptr;
+
+        // else better use move assignment ctr instead if defined for optimal code.
+        *this = move(m1);
+        cout << "\n Moved ctrr size = " << this->m_size << " m_data = " << this->m_data;
+        m1.m_data = nullptr;
+        m1.m_size = 0;
     }
 
     void printVal()
@@ -58,7 +69,8 @@ public:
     ~Moved()
     {
         cout << "\n destructing ....";
-        delete m_data;
+        if (m_data != nullptr)
+            delete[] m_data;
     }
 
 private:
@@ -72,10 +84,6 @@ int main()
     Moved m2(m1);
 
     Moved m3(std::move(m2));
-
-    Moved m4("Gaurav");
-
-    // m4 = (std::move(m3));
 
     cout << "\n\n";
 
