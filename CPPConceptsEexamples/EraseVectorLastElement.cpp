@@ -2,7 +2,7 @@
  * @Author: gauravawasthi@outlook.com
  * @Date: 2022-03-24 23:39:47
  * @Last Modified by: gaurav
- * @Last Modified time: 2022-03-25 01:19:39
+ * @Last Modified time: 2022-03-25 01:20:20
  */
 
 #include "mychrono.h"
@@ -42,6 +42,8 @@ void VecEraseLastElement()
         if (*itr % 2 != 0)
         {
             itr = myVec.erase(itr);
+
+            // check if you dont you tend to increment post end and it crashes
             if (itr == myVec.end())
                 break;
         }
@@ -56,10 +58,21 @@ void CheckErase()
     iota(myVec.begin(), myVec.end(), 0);
 
     // auto itr = myVec.erase(remove(myVec.begin(), myVec.end(), 3), myVec.end());
+
     // or
+
     // auto itr = find(myVec.begin(), myVec.end(), 3);
-    // itr = myVec.erase(itr);
-    auto itr = erase(myVec, 3); // from c++ 20 onwards combines remove operation in itself
+    // itr = myVec.erase(itr);\
+
+    // or
+
+    // auto itr = erase(myVec, 3); // from c++ 20 onwards combines remove operation in itself
+
+    // or
+
+    // using erase predicate
+    auto itr = erase_if(myVec, [](int x)
+                        { return (x == 3); });
 
     printVec(myVec);
 }

@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <memory>
 
 using namespace std;
 
@@ -37,6 +38,7 @@ public:
     }
     UniquePtr(T *_ptr) : smartPtr(_ptr)
     {
+        cout << "\n raw object created...and pointed by Unique_ptr...";
     }
 
     UniquePtr(const UniquePtr &ptr) = delete;
@@ -62,7 +64,8 @@ public:
 
     UniquePtr(UniquePtr &&_ptr)
     {
-        smartPtr = move(_ptr);
+        // smartPtr = move(_ptr);
+        *smartPtr = *_ptr;
         _ptr = nullptr;
     }
 
@@ -87,7 +90,7 @@ public:
 
 int main()
 {
-    UniquePtr<base> ptr (new base(20));
-    
-    
+    UniquePtr<base> ptr(new base(20));
+
+    UniquePtr<base> ptr1 = move(ptr);
 }
