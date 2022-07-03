@@ -61,7 +61,7 @@ int main()
 
     int ret = 0;
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         if (ret = pthread_create(&writer[i], NULL, &writersJob, &i))
         {
@@ -70,7 +70,7 @@ int main()
         }
     }
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (ret = pthread_create(&reader[i], NULL, &readersJob, &i))
         {
@@ -81,12 +81,12 @@ int main()
 
     sleep(3);
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 5; i++)
     {
         pthread_join(reader[i], NULL);
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 2; i++)
     {
         pthread_join(writer[i], NULL);
     }

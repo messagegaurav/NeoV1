@@ -46,7 +46,7 @@ void *consumer(void *param)
     ret = counter;
     pthread_mutex_unlock(&myMutex);
     cout << " \n thread: " << *((int *)param) << " read counter value: " << counter;
-    return (void *)ret;
+    return &ret;
 }
 
 typedef struct base
