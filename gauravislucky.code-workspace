@@ -1,0 +1,82 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../CPPReatNeo_gauravisneo"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#65c89b",
+			"activityBar.activeBorder": "#945bc4",
+			"activityBar.background": "#65c89b",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#945bc4",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"sash.hoverBorder": "#65c89b",
+			"statusBar.background": "#42b883",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#359268",
+			"statusBarItem.remoteBackground": "#42b883",
+			"statusBarItem.remoteForeground": "#15202b",
+			"titleBar.activeBackground": "#42b883",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#42b88399",
+			"titleBar.inactiveForeground": "#15202b99",
+			"commandCenter.border": "#15202b99"
+		},
+		"peacock.remoteColor": "#42b883",
+		"makefile.launchConfigurations": [
+			{
+				"cwd": "/home/gauravislucky/repos/NeoV1/bin",
+				"binaryPath": "/home/gauravislucky/repos/NeoV1/bin/Main",
+				"includePath": "/home/gauravislucky/repos/NeoV1/include",
+				"binaryArgs": []
+			}
+		],
+		"code-runner.clearPreviousOutput": true,
+		"fileheader.Author": "gauravawasthi@outlook.com",
+		"fileheader.LastModifiedBy": "gaurav",
+		"files.associations": {
+			"string_view": "cpp",
+			"iostream": "cpp",
+			"ostream": "cpp",
+			"*.tcc": "cpp",
+			"deque": "cpp",
+			"vector": "cpp",
+			"cctype": "cpp",
+			"clocale": "cpp",
+			"cmath": "cpp",
+			"compare": "cpp",
+			"concepts": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"ctime": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"exception": "cpp",
+			"initializer_list": "cpp",
+			"iosfwd": "cpp",
+			"istream": "cpp",
+			"limits": "cpp",
+			"new": "cpp",
+			"numbers": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"string": "cpp",
+			"system_error": "cpp",
+			"type_traits": "cpp",
+			"typeinfo": "cpp",
+			"chrono": "cpp",
+			"atomic": "cpp",
+			"condition_variable": "cpp",
+			"span": "cpp"
+		},
+		"C_Cpp.vcFormat.space.pointerReferenceAlignment": "left",
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

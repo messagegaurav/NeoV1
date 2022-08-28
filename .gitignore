@@ -48,3 +48,18 @@ Thumbs.db
 *.mov
 *.wmv
 
+#vscode defaults
+*.vscode
+
+#Executables
+/bin
+/debug
+
+
+
+
+bin/Main
+
+workspace.code-workspace
+
+/examples/bin/*
