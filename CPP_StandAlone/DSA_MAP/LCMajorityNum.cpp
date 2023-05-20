@@ -9,6 +9,7 @@
 #include <map>
 #include <algorithm>
 
+
  // Q. find the majority element that exists more than n/2 times in the array[n].
 
 int majorityElement(vector<int>& nums)

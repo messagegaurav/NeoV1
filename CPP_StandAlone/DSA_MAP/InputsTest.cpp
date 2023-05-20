@@ -26,7 +26,7 @@ void GetLine()
     }
 
     for (auto i : myVec)
-    cout<<"target lines:    "<<i<<"\n";
+    cout<<" "<<i<<"\n";
     myVec.clear();
 }
 

@@ -1,5 +1,5 @@
-target lines:    wow
-target lines:    its been good learning 
-target lines:    and I am happy now 
-target lines:    lets rock it tomorrow dear 
-target lines:    1..2....4 good night buddy !!!
+DummyClass constructor called
+DummyClass move constructor called
+Hello World!
+DummyClass destructor called
+DummyClass destructor called

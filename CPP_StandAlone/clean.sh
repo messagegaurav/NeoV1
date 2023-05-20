@@ -1,9 +1,10 @@
 #!/bin/sh
 echo "listing dummy executables....\n\n"
 listoffiles=$(grep -rIL .)
-echo $listoffiles
+echo $listoffiles | sed 's/\s/\n/g'
 
-echo -n "You sure to delete (y/n)? "
+
+echo -n "\nYou sure to delete (y/n)? "
 read answer
 if echo "$answer" | grep -iq "^y" ;then
     rm -rf $listoffiles
