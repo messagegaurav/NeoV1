@@ -63,3 +63,9 @@ bin/Main
 workspace.code-workspace
 
 /examples/bin/*
+
+CPP_StandAlone/DSA_MAP/InputsTest
+
+CPP_StandAlone/DSA_MAP/LCContainsDup
+
+InputsTest
