@@ -129,7 +129,7 @@ void CallDecoratorPattern()
     myCar = new AlloyWheels(myCar);
     cout << "Car Model: " << myCar->getInfo() << " at Price: " << myCar->costPrice() << "\n\n";
 
-    delete[] myCar;
+    delete myCar;
 }
 
 #endif // !__DECORATOR_PATTERN__
