@@ -6,5 +6,5 @@ CXX_DEFINES = -DdesignPatternlib_EXPORTS
 
 CXX_INCLUDES = -I/home/luckyisneo/repos/NeoV1/include
 
-CXX_FLAGS = -std=gnu++14 -fPIC
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14 -fPIC
 

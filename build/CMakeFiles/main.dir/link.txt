@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/main.dir/src/Main.cpp.o -o main  -Wl,-rpath,/home/luckyisneo/repos/NeoV1/library /home/luckyisneo/repos/NeoV1/library/libdesignPatternlib.so 
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/main.dir/src/Main.cpp.o -o main  -Wl,-rpath,/home/luckyisneo/repos/NeoV1/library /home/luckyisneo/repos/NeoV1/library/libdesignPatternlib.so 
