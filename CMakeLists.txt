@@ -39,3 +39,7 @@ set_target_properties(main PROPERTIES
     BUILD_RPATH ${LIBRARY_OUTPUT_PATH}
     INSTALL_RPATH ${LIBRARY_OUTPUT_PATH}
 )
+
+
+
+
