@@ -27,7 +27,7 @@ public:
 
     // Move constructor (logs move)
     // NOTE: taking const Task&& prevents moving 'name' efficiently; prefer: Task(Task&&) noexcept
-    Task(const Task &&other) noexcept : id(other.id), name(move(other.name))
+    Task(Task&& other) noexcept : id(other.id), name(move(other.name))
     {
         cout << "Task Moved: " << name << " with ID: " << id << "\n";
     }
