@@ -19,6 +19,9 @@
 # Exclude temporary code runner files
 tempCodeRunnerFile.cpp
 
+# Exclude CodeQL build directory
+_codeql_build_dir/
+
 # Keep build scripts and config you may need
 !CMakeLists.txt
 !.gitignore
