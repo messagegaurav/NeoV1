@@ -1,1 +1,0 @@
-cout << "ptr2 points to " << ptr2->showVal() << endl;

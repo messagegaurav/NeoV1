@@ -16,12 +16,21 @@
 !*.ixx
 !*.tpp
 
+# Exclude temporary code runner files
+tempCodeRunnerFile.cpp
+
+# Exclude CodeQL build directory
+_codeql_build_dir/
+
 # Keep build scripts and config you may need
 !CMakeLists.txt
 !.gitignore
 
 # (Optional) keep other text sources
 !*.md
+
+# Ignore CodeQL build artifacts
+_codeql_build_dir/
 
 # If you already committed unwanted files, run:
 # git rm -r --cached .

@@ -1,1 +1,0 @@
-tasks.emplace(3, "Documentation"); // duplicate key, will be ignored

@@ -49,9 +49,8 @@ int main()
     itemStock.push(make_unique<Items>("Item 5"));
 
     cout << "Total items in stock: " << itemStock.size() << "\n\n";
-    int len = itemStock.size();
 
-    for (size_t i = 0; i < len; i++)
+    while (!itemStock.empty())
     {
         cout << "Top item in stock:\n";
         itemStock.top()->display();
