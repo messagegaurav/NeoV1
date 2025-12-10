@@ -16,6 +16,9 @@
 !*.ixx
 !*.tpp
 
+# Exclude temporary code runner files
+tempCodeRunnerFile.cpp
+
 # Keep build scripts and config you may need
 !CMakeLists.txt
 !.gitignore
