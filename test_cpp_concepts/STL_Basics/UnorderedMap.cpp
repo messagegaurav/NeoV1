@@ -22,7 +22,7 @@ public:
     {
         cout << "Employee Destroyed: " << empId << "\n";
     }
-    int getempId() const { return empId; }
+    int getEmpId() const { return empId; }
     string getName() const { return name; }
 };
 
@@ -31,7 +31,7 @@ struct hashFunction
 {
     size_t operator()(const Employee &emp) const
     {
-        return hash<int>()(emp.getempId()) ^ (hash<string>()(emp.getName()) << 1);
+        return hash<int>()(emp.getEmpId()) ^ (hash<string>()(emp.getName()) << 1);
     }
 };
 
@@ -39,7 +39,7 @@ struct equalFunction
 {
     bool operator()(const Employee &e1, const Employee &e2) const
     {
-        return (e1.getempId() == e2.getempId() && e1.getName() == e2.getName());
+        return (e1.getEmpId() == e2.getEmpId() && e1.getName() == e2.getName());
     }
 };
 #endif
@@ -61,7 +61,7 @@ int main()
 
     for (const auto &entry : salaryMap)
     {
-        cout << "Employee ID: " << entry.second.getempId() << ", Name: " << entry.second.getName() << ", Role: " << entry.first << "\n";
+        cout << "Employee ID: " << entry.second.getEmpId() << ", Name: " << entry.second.getName() << ", Role: " << entry.first << "\n";
     }
 
     auto it = salaryMap.find("Engineer");
@@ -83,7 +83,7 @@ int main()
 
     for (const auto &entry : empRecords)
     {
-        cout << "Employee ID: " << entry.second.emp->getempId() << ", Name: " << entry.second.emp->getName() << ", Designation: " << entry.second.salary << "\n";
+        cout << "Employee ID: " << entry.second.emp->getEmpId() << ", Name: " << entry.second.emp->getName() << ", Designation: " << entry.second.salary << "\n";
     }
 
     auto it = empRecords.find("Designer");
