@@ -22,7 +22,7 @@ public:
     {
         cout << "Employee Destroyed: " << empId << "\n";
     }
-    int getempId() const { return empId; }
+    int getEmpId() const { return empId; }
     string getName() const { return name; }
 
     bool operator==(const Employee &other) const
@@ -36,7 +36,7 @@ struct hashFunction
 {
     size_t operator()(const Employee &emp) const
     {
-        return hash<int>()(emp.getempId()) ^ (hash<string>()(emp.getName()) << 1);
+        return hash<int>()(emp.getEmpId()) ^ (hash<string>()(emp.getName()) << 1);
     }
 };
 
@@ -49,7 +49,7 @@ int main()
 
     for (const auto &entry : empSet)
     {
-        cout << "Employee ID: " << entry.getempId() << ", Name: " << entry.getName() << "\n";
+        cout << "Employee ID: " << entry.getEmpId() << ", Name: " << entry.getName() << "\n";
     }
 
     auto it = empSet.find(Employee{2, "Eva"});
