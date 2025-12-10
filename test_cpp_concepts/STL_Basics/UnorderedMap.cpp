@@ -77,13 +77,13 @@ int main()
 
     unordered_map<string, EmployeeRecord> empRecords;
 
-    empRecords.emplace("Programmer", EmployeeRecord{make_unique<Employee>(1, "David"), 1000});
-    empRecords.emplace("Designer", EmployeeRecord{make_unique<Employee>(2, "Eva"), 2000});
-    empRecords.emplace("Manager", EmployeeRecord{make_unique<Employee>(3, "Frank"), 3000});
+    empRecords.emplace("Programmer", EmployeeRecord{make_unique<Employee>(1, "David"), 1000, "Programmer"});
+    empRecords.emplace("Designer", EmployeeRecord{make_unique<Employee>(2, "Eva"), 2000, "Designer"});
+    empRecords.emplace("Manager", EmployeeRecord{make_unique<Employee>(3, "Frank"), 3000, "Manager"});
 
     for (const auto &entry : empRecords)
     {
-        cout << "Employee ID: " << entry.second.emp->getEmpId() << ", Name: " << entry.second.emp->getName() << ", Designation: " << entry.second.salary << "\n";
+        cout << "Employee ID: " << entry.second.emp->getEmpId() << ", Name: " << entry.second.emp->getName() << ", Designation: " << entry.second.designation << "\n";
     }
 
     auto it = empRecords.find("Designer");

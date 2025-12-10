@@ -52,7 +52,7 @@ int main()
 
     cout << "Total tasks in priority queue: " << pQueue.size() << "\n\n";
     int len = pQueue.size();
-    while (pQueue.empty() == false)
+    while (!pQueue.empty())
     {
         cout << "Highest priority task:\n";
         pQueue.top()->display();
