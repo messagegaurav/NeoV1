@@ -23,6 +23,9 @@
 # (Optional) keep other text sources
 !*.md
 
+# Ignore CodeQL build artifacts
+_codeql_build_dir/
+
 # If you already committed unwanted files, run:
 # git rm -r --cached .
 # git add .
