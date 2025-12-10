@@ -4,8 +4,6 @@
 
 using namespace std;
 
-#define SECA 0
-#define SECB 1
 
 class Employee
 {
