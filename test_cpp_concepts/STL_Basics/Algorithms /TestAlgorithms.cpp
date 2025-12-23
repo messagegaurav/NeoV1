@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <sstream>
 #include <iterator>
+#include <list>
 
 using namespace std;
 
@@ -50,6 +51,12 @@ int main()
     cout << "12. Remove Duplicates\n";
     cout << "13. Remove/Pop Last Element\n";
     cout << "14. Map/Unordered Map Remove Last\n";
+    cout << "15. Erase duplicates from the list\n";
+    cout << "16. Copy algo \n";
+    cout << "17. Iota algo \n";
+    cout << "18. Missing Elements (Set Difference)\n";
+    cout << "19. Common Elements (Set Intersection)\n";
+    cout << "Enter choice (1-19): ";
     int choice;
     cin >> choice;
     cout << "\n";
@@ -238,6 +245,82 @@ int main()
         cout << "Unordered Map after removing an element: ";
         for (const auto &p : ump)
             cout << p.first << ":" << p.second << " ";
+        cout << "\n";
+        break;
+    }
+
+    case 15:
+    {
+        list<int> vals = {50, 80, 10, 20, 10, 20, 71, 80, 71, 63, 80};
+        vals.sort();   // Sort the list first
+        vals.unique(); // Remove duplicates
+        cout << "List after erasing duplicates: ";
+        for (const auto &v : vals)
+            cout << v << " ";
+        cout << "\n";
+
+        vector<int> vec = {50, 80, 10, 20, 10, 20, 71, 80, 71, 63, 80};
+        sort(vec.begin(), vec.end());
+        vec.erase(unique(vec.begin(), vec.end()), vec.end());
+        cout << "Vector after erasing duplicates: ";
+        for (const auto &v : vec)
+            cout << v << " ";
+        cout << "\n";
+        break;
+    }
+
+    case 16:
+    {
+        vector<int> source = {1, 2, 3, 4, 5};
+        vector<int> destination(source.size());
+        copy(source.begin(), source.end(), destination.begin());
+        cout << "Destination vector after copy: ";
+        for (const auto &v : destination)
+            cout << v << " ";
+        cout << "\n";
+        break;
+    }
+
+    case 17:
+    {
+        // using iota
+        vector<int> vals(10);
+        iota(vals.begin(), vals.end(), 1); // Fill with values starting from 1
+        cout << "Vector after iota: ";
+        for (const auto &v : vals)
+            cout << v << " ";
+        cout << "\n";
+        break;
+    }
+
+    case 18:
+    {
+        // finding missing elements
+        vector<string> vals = {"Bob", "Alpha", "Charlie", "Tom", "Muse", "Fuse"};
+        vector<string> fullRange = {"Alpha", "Bob", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima", "Mike", "Muse", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tom", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"};
+        sort(vals.begin(), vals.end());
+        sort(fullRange.begin(), fullRange.end());
+        vector<string> missingElements;
+        set_difference(fullRange.begin(), fullRange.end(), vals.begin(), vals.end(), back_inserter(missingElements));
+        cout << "Missing elements: ";
+        for (const auto &v : missingElements)
+            cout << v << " ";
+        cout << "\n";
+        break;
+    }
+
+    case 19:
+    {
+        // common data in two containers
+        vector<string> vals1 = {"Bob", "Alpha", "Charlie", "Tom", "Muse", "Fuse"};
+        vector<string> vals2 = {"Alpha", "Delta", "Charlie", "Echo", "Muse", "Golf"};
+        sort(vals1.begin(), vals1.end());
+        sort(vals2.begin(), vals2.end());
+        vector<string> commonElements;
+        set_intersection(vals1.begin(), vals1.end(), vals2.begin(), vals2.end(), back_inserter(commonElements));
+        cout << "Common elements: ";
+        for (const auto &v : commonElements)
+            cout << v << " ";
         cout << "\n";
         break;
     }
