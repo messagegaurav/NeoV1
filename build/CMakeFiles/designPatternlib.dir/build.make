@@ -73,113 +73,113 @@ CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o: CMakeFiles/desi
 CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o: /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp
 CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o -MF CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o -c /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o -MF CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.o -c /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp
 
 CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp > CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp > CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp -o CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/AbstractFactoryMethod.cpp -o CMakeFiles/designPatternlib.dir/src/AbstractFactoryMethod.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o: /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp
 CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o -MF CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o -c /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o -MF CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.o -c /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp
 
 CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp > CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp > CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp -o CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/AdapterDesign.cpp -o CMakeFiles/designPatternlib.dir/src/AdapterDesign.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o: /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp
 CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o -MF CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o -c /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o -MF CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.o -c /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp
 
 CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp > CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp > CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp -o CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/BuilderClass.cpp -o CMakeFiles/designPatternlib.dir/src/BuilderClass.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o: /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp
 CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o -MF CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o -c /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o -MF CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.o -c /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp
 
 CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp > CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp > CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp -o CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/MoveCtr.cpp -o CMakeFiles/designPatternlib.dir/src/MoveCtr.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o: /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp
 CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o -MF CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o -c /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o -MF CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.o -c /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp
 
 CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp > CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp > CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp -o CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/ObjectRelations.cpp -o CMakeFiles/designPatternlib.dir/src/ObjectRelations.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o: /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp
 CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o -MF CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o -c /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o -MF CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.o -c /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp
 
 CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp > CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp > CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp -o CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/ObserverPattern.cpp -o CMakeFiles/designPatternlib.dir/src/ObserverPattern.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o: /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp
 CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o -MF CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o -c /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o -MF CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.o -c /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp
 
 CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp > CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp > CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp -o CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/SingletonPattern.cpp -o CMakeFiles/designPatternlib.dir/src/SingletonPattern.cpp.s
 
 CMakeFiles/designPatternlib.dir/src/timer.cpp.o: CMakeFiles/designPatternlib.dir/flags.make
 CMakeFiles/designPatternlib.dir/src/timer.cpp.o: /home/luckyisneo/repos/NeoV1/src/timer.cpp
 CMakeFiles/designPatternlib.dir/src/timer.cpp.o: CMakeFiles/designPatternlib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/luckyisneo/repos/NeoV1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/designPatternlib.dir/src/timer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/timer.cpp.o -MF CMakeFiles/designPatternlib.dir/src/timer.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/timer.cpp.o -c /home/luckyisneo/repos/NeoV1/src/timer.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/designPatternlib.dir/src/timer.cpp.o -MF CMakeFiles/designPatternlib.dir/src/timer.cpp.o.d -o CMakeFiles/designPatternlib.dir/src/timer.cpp.o -c /home/luckyisneo/repos/NeoV1/src/timer.cpp
 
 CMakeFiles/designPatternlib.dir/src/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/designPatternlib.dir/src/timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/timer.cpp > CMakeFiles/designPatternlib.dir/src/timer.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luckyisneo/repos/NeoV1/src/timer.cpp > CMakeFiles/designPatternlib.dir/src/timer.cpp.i
 
 CMakeFiles/designPatternlib.dir/src/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/designPatternlib.dir/src/timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/timer.cpp -o CMakeFiles/designPatternlib.dir/src/timer.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luckyisneo/repos/NeoV1/src/timer.cpp -o CMakeFiles/designPatternlib.dir/src/timer.cpp.s
 
 # Object files for target designPatternlib
 designPatternlib_OBJECTS = \

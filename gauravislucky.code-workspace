@@ -74,6 +74,12 @@
 			"span": "cpp"
 		},
 		"C_Cpp.vcFormat.space.pointerReferenceAlignment": "left",
-		"makefile.extensionOutputFolder": "./.vscode"
+		"makefile.extensionOutputFolder": "./.vscode",
+		"folder-color.pathColors": [
+			{
+				"folderPath": "NeoV1/test_cpp_concepts/DSA_Basics/LinkedList/",
+				"color": "foldercolorizer.color_33cc00"
+			}
+		]
 	}
 }
