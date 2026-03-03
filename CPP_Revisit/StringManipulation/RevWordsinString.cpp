@@ -9,18 +9,20 @@ void revString(const string &text)
     string str;
     for (auto &ch : text)
     {
-        if ((ch >= 'a' || ch >= 'A') && (ch <= 'z' || ch <= 'Z'))
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
         {
             str += ch;
         }
         else
         {
-            staq.push(str);
+            if (!str.empty())
+                staq.push(str);
             // vec.push_back(str);
-            str = " ";
+            str = "";
         }
     }
-    staq.push(str);
+    if (!str.empty())
+        staq.push(str);
     // vec.push_back(str);
     while (!staq.empty())
     {
@@ -33,10 +35,28 @@ void revString(const string &text)
     //     cout << " " << ch;
     // }
 }
+
+// using stringstream
+void usingStringStream(string text)
+{
+    stack<string> staq;
+    stringstream ss(text);
+    string word;
+    while (ss >> word)
+        staq.push(word);
+
+    while (!staq.empty())
+    {
+        cout << " " << staq.top();
+        staq.pop();
+    }
+}
 int main()
 {
     string str = "Baba Yaga is back in John wick";
     revString(str);
+    cout << endl;
+    usingStringStream(str);
     cout << "\n";
     return 0;
 }

@@ -35,6 +35,12 @@
 			}
 		],
 		"code-runner.clearPreviousOutput": true,
+		"code-runner.executorMap": {
+			"cpp": "cd $dir && ccache g++ -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt",
+			"c": "cd $dir && ccache gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt"
+		},
+		"code-runner.runInTerminal": true,
+		"code-runner.saveFileBeforeRun": true,
 		"fileheader.Author": "gauravawasthi@outlook.com",
 		"fileheader.LastModifiedBy": "gaurav",
 		"files.associations": {
