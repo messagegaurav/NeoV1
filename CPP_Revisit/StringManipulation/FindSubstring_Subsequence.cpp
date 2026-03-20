@@ -73,7 +73,7 @@ void allSubSequence(const string &str)
 int main()
 {
     string text = "ABC";
-    // allSubString(text);
+    allSubString(text);
     // allSubString1(text);
     allSubSequence(text);
     return 0;

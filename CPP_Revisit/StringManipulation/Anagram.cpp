@@ -31,9 +31,9 @@ bool usingFreqArray(const string &str, const string &str1)
 int main()
 {
     string str = "hola bola";
-    string str2 = "bola holaz";
-    map<char, int> mmap1;
-    map<char, int> mmap2;
+    string str2 = "bola hola";
+    unordered_map<char, int> mmap1;
+    unordered_map<char, int> mmap2;
 
     for (auto &ch : str)
     {

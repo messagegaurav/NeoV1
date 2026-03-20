@@ -10,7 +10,7 @@ vector<vector<string>> anagramGroup(const vector<string> &vec)
 {
     unordered_map<string, vector<string>> uMap;
 
-    for (string ch : vec)
+    for (const auto &ch : vec)
     {
         string key = ch;
         sort(key.begin(), key.end());

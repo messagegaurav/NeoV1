@@ -2,7 +2,7 @@
 
 using namespace std;
 
-template <class T>
+template <typename T>
 class SmartPtr
 {
 private:
@@ -16,7 +16,7 @@ public:
     }
     SmartPtr(const SmartPtr &) = delete;
     SmartPtr &operator=(const SmartPtr &) = delete;
-    SmartPtr(SmartPtr &&other) noexcept : ptr(other.ptr)
+    SmartPtr(SmartPtr &&other) noexcept : ptr(move(other.ptr))
     {
         other.ptr = nullptr;
     }
@@ -25,7 +25,7 @@ public:
         if (this != &other)
         {
             delete ptr;
-            ptr = other.ptr;
+            ptr = move(other.ptr);
             other.ptr = nullptr;
         }
         return *this;

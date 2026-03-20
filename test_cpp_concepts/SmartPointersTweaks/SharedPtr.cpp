@@ -117,7 +117,7 @@ int main()
     cout << "sp1-> val: " << *sp1 << " refcount: " << sp1.use_count() << "\n\n";
 
     Sptr<int> sp2 = sp1; // share ownership
-    cout << "sp2-> val: " << *sp2 << " refcount: " << sp2.use_count() << "\n\n";
+    cout << "sp2-> val: " << *sp2 << " refcount: " << sp2.use_count() << " sp1 count: " << sp1.use_count() << "\n\n";
 
     {
         Sptr<int> sp3 = sp2; // share ownership in inner scope
