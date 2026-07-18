@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <mutex>
+#include <atomic>
 
 using namespace std;
 
@@ -9,15 +10,15 @@ class cSingleton
 public:
     static cSingleton *getInstance()
     {
-        if (instance == nullptr)
+        if (instance.load() == nullptr)
         {
             lock_guard<mutex> lock(mtx);
-            if (instance == nullptr)
+            if (instance.load() == nullptr)
             {
-                instance = new cSingleton();
+                instance.store(new cSingleton());
             }
         }
-        return instance;
+        return instance.load();
     }
 
     void DoSomething()
@@ -29,16 +30,17 @@ public:
     static void destroyInstance()
     {
         lock_guard<mutex> lock(mtx);
-        if (instance != nullptr)
+        cSingleton *ptr = instance.load();
+        if (ptr != nullptr)
         {
             cout << " Destroing instance ptr..\n\n";
-            delete instance;
-            instance = nullptr;
+            instance.store(nullptr);
+            delete ptr;
         }
     }
 
 private:
-    static cSingleton *instance;
+    static atomic<cSingleton *> instance;
     static mutex mtx;
     cSingleton();
     ~cSingleton();
@@ -56,7 +58,7 @@ cSingleton::~cSingleton()
     cout << " Singleton instance destroyed..\n\n";
 }
 
-cSingleton *cSingleton::instance = nullptr;
+atomic<cSingleton *> cSingleton::instance = nullptr;
 mutex cSingleton::mtx;
 
 int main()
@@ -66,8 +68,6 @@ int main()
 
     cSingleton *singleton2 = cSingleton::getInstance();
     // singleton2->DoSomething();
-
-    cSingleton::destroyInstance();
 
     if (singleton1 == singleton2)
     {
@@ -79,6 +79,8 @@ int main()
         cout << "Both instances are different"
              << "\n\n";
     }
+
+    cSingleton::destroyInstance();
 
     return 0;
 }

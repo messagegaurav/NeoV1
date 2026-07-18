@@ -7,12 +7,12 @@
 	"settings": {
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#65c89b",
-			"activityBar.activeBorder": "#945bc4",
 			"activityBar.background": "#65c89b",
 			"activityBar.foreground": "#15202b",
 			"activityBar.inactiveForeground": "#15202b99",
 			"activityBarBadge.background": "#945bc4",
 			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#15202b99",
 			"sash.hoverBorder": "#65c89b",
 			"statusBar.background": "#42b883",
 			"statusBar.foreground": "#15202b",
@@ -23,7 +23,10 @@
 			"titleBar.activeForeground": "#15202b",
 			"titleBar.inactiveBackground": "#42b88399",
 			"titleBar.inactiveForeground": "#15202b99",
-			"commandCenter.border": "#15202b99"
+			"editorBracketHighlight.foreground1": "#ff79c6",
+			"editorBracketHighlight.foreground2": "#bd93f9",
+			"editorBracketHighlight.foreground3": "#8be9fd",
+			"editorBracketHighlight.unexpectedBracket.foreground": "#ff5555"
 		},
 		"peacock.remoteColor": "#42b883",
 		"makefile.launchConfigurations": [
@@ -36,8 +39,10 @@
 		],
 		"code-runner.clearPreviousOutput": true,
 		"code-runner.executorMap": {
-			"cpp": "cd $dir && ccache g++ -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt",
-			"c": "cd $dir && ccache gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt"
+
+
+			"cpp": "cd $dir && ccache g++ -g -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt",
+			"c": "cd $dir && ccache gcc -g $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm -f $fileNameWithoutExt"
 		},
 		"code-runner.runInTerminal": true,
 		"code-runner.saveFileBeforeRun": true,
@@ -79,6 +84,9 @@
 			"condition_variable": "cpp",
 			"span": "cpp"
 		},
+"editor.bracketPairColorization.enabled": true,
+"editor.guides.bracketPairs": "active",
+"editor.semanticHighlighting.enabled": true,
 		"C_Cpp.vcFormat.space.pointerReferenceAlignment": "left",
 		"makefile.extensionOutputFolder": "./.vscode",
 		"folder-color.pathColors": [
@@ -86,6 +94,24 @@
 				"folderPath": "NeoV1/test_cpp_concepts/DSA_Basics/LinkedList/",
 				"color": "foldercolorizer.color_33cc00"
 			}
-		]
+		],
+		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+		"editor.formatOnSave": true,
+		"editor.acceptSuggestionOnEnter": "off",
+		"editor.acceptSuggestionOnCommitCharacter": true,
+		"editor.suggest.enabled": true,
+		"editor.quickSuggestions": {
+			"other": false,
+			"comments": false,
+			"strings": false
+		},
+		"editor.suggestOnTriggerCharacters": true,
+		"editor.inlineSuggest.enabled": false,
+		"C_Cpp.intelliSenseEngine": "default",
+		"C_Cpp.autocomplete": "default",
+		"github.copilot.enable": false,
+		"codeium.autocomplete.enabled": false,
+		"amazonQ.importRecommendationForInlineCodeSuggestions": false,
+		"amazonQ.showCodeWithReferences": false
 	}
 }
