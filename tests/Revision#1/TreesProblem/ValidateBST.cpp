@@ -13,10 +13,9 @@ struct Node
 // Helper function to validate BST
 bool isBSTUtil(Node *root, long long minVal, long long maxVal)
 {
-    if (root == nullptr)
-    {
+    if (!root)
         return true;
-    }
+
     if (root->data <= minVal || root->data >= maxVal)
         return false;
     return isBSTUtil(root->left, minVal, root->data) && isBSTUtil(root->right, root->data, maxVal);

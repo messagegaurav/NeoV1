@@ -76,15 +76,16 @@ Node *LCA_BST(Node *root, Node *p, Node *q)
 {
     while (root)
     {
-        if (p->data < root->data && q->data < root->data)
+        if (root->data >= p->data && root->data >= q->data)
             root = root->left;
-        else if (p->data > root->data && q->data > root->data)
+        else if (root->data <= p->data && root->data <= q->data)
             root = root->right;
         else
         {
             return root;
         }
     }
+    return root;
 }
 
 int heightOfTree(Node *root)
