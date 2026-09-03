@@ -39,6 +39,8 @@ bool usingTwoPointers(const string &text)
     while (text[left] != text[right])
     {
         flag = false;
+        left++;
+        right--;
     }
     return flag;
 }
@@ -51,8 +53,10 @@ int main()
 
     bool check = palindromeCheck(str);
     cout << ((check) ? "Yes its a Palindrome text" : "No its not a palindrome Text");
+    cout << "\n";
     check = checkUsingStack(str);
     cout << ((check) ? "Yes its a Palindrome text" : "No its not a palindrome Text");
+    cout << "\n";
     check = usingTwoPointers(str);
     cout << ((check) ? "Yes its a Palindrome text" : "No its not a palindrome Text");
     cout << "\n";
